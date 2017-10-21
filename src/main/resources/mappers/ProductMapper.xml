@@ -5,7 +5,7 @@
 <mapper namespace="com.example.demo.dao.mapper.ProductMapper">
 
     <!-- 开启基于redis的二级缓存 -->
-    <!--<cache type="com.example.demo.util.RedisCache"/>-->
+    <cache type="com.example.demo.util.RedisCache"/>
 
     <select id="select" resultType="Product">
         SELECT * FROM products WHERE id = #{id} LIMIT 1
